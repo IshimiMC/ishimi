@@ -1,5 +1,5 @@
 [package]
-name = "wclient"
+name = "ishimi"
 version = "0.1.0"
 edition = "2021"
 description = "A sane mod manager for Minecraft."
