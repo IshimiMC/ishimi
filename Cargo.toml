@@ -1,0 +1,18 @@
+[package]
+name = "wclient"
+version = "0.1.0"
+edition = "2021"
+description = "A sane mod manager for Minecraft."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.17", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+validator = { version = "0.14", features = ["derive"] }
+regex = "1.5"
+semver = "1.0"
+clap = { version = "3.1", features = ["derive"] }
+toml = "0.5"

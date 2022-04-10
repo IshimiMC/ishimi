@@ -1,0 +1,32 @@
+config_version = 1
+
+[meta]
+name = "Example Pack"
+author = "Wuzado"
+version = "1.0.0"
+side = "client"
+
+[versions]
+minecraft = "1.18.2" # required
+fabric = "0.13.3" # "*" for the latest version (attempts to match to the MC version)
+forge = "40.0.32" # "*" for the latest version (attempts to match to the MC version)
+
+[[mods]]
+friendly_name = "Sodium by Jellysquid"
+name = "sodium"
+filename = "borderless-mining-1.1.1+1.18.jar"
+version = "" # for searching
+
+[[mods.direct]]
+url = "" # just fetches the url
+
+[[mods.modrinth]]
+project_id = "kYq5qkSL" # or: mod_id = "kYq5qkSL"
+file_id = "ug2qKTPR" # or: version = "ug2qKTPR"
+
+[[mods.curseforge]]
+project_id = 327154 # or: mod_id = 327154
+file_id = 3509043 # or: version = 3509043
+
+[[files]]
+url = ""
