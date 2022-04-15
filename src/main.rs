@@ -16,7 +16,7 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    let file_str = &*fs::read_to_string(&args.path).unwrap();
+    let file_str = fs::read_to_string(&args.path).unwrap().as_str();
 
     println!("{:}", file_str);
 
