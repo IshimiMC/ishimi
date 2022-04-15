@@ -352,6 +352,21 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68f2d64f2edebec4ce84ad108148e67e1064789bee435edc5b60ad398714a3a9"
 
 [[package]]
+name = "ishimi"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "regex",
+ "reqwest",
+ "semver",
+ "serde",
+ "serde_json",
+ "tokio",
+ "toml",
+ "validator",
+]
+
+[[package]]
 name = "itoa"
 version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1133,21 +1148,6 @@ name = "wasm-bindgen-shared"
 version = "0.2.79"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3d958d035c4438e28c70e4321a2911302f10135ce78a9c7834c0cab4123d06a2"
-
-[[package]]
-name = "wclient"
-version = "0.1.0"
-dependencies = [
- "clap",
- "regex",
- "reqwest",
- "semver",
- "serde",
- "serde_json",
- "tokio",
- "toml",
- "validator",
-]
 
 [[package]]
 name = "web-sys"

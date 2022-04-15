@@ -1,2 +1,2 @@
 mod uklient;
-mod ishimi;
+pub mod ishimi;

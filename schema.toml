@@ -25,8 +25,8 @@ project_id = "kYq5qkSL" # or: mod_id = "kYq5qkSL"
 file_id = "ug2qKTPR" # or: version = "ug2qKTPR"
 
 [[mods.curseforge]]
-project_id = 327154 # or: mod_id = 327154
-file_id = 3509043 # or: version = 3509043
+project_id = "327154" # or: mod_id = "327154"
+file_id = "3509043" # or: version = "3509043"
 
 [[files]]
 url = ""
