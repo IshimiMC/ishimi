@@ -2,11 +2,11 @@ use serde::{Serialize, Deserialize};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormat {
-    config_version: u32,
-    meta: IshimiFormatMeta,
-    versions: IshimiFormatVersions,
-    mods: Option<Vec<IshimiFormatMod>>,
-    files: Option<Vec<IshimiFormatFiles>>
+    pub config_version: u32,
+    pub meta: IshimiFormatMeta,
+    pub versions: IshimiFormatVersions,
+    pub mods: Option<Vec<IshimiFormatMod>>,
+    pub files: Option<Vec<IshimiFormatFiles>>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -21,44 +21,44 @@ pub enum IshimiFormatSide {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatMeta {
-    name: String,
-    author: String,
-    version: String,
-    side: IshimiFormatSide
+    pub name: String,
+    pub author: String,
+    pub version: String,
+    pub side: IshimiFormatSide
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatVersions {
-    minecraft: String,
-    fabric: Option<String>,
-    forge: Option<String>
+    pub minecraft: String,
+    pub fabric: Option<String>,
+    pub forge: Option<String>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatMod {
-    name: String,
-    friendly_name: Option<String>,
-    filename: Option<String>,
-    version: Option<String>,
-    direct: Option<Vec<IshimiFormatModDirect>>,
-    modrinth: Option<Vec<IshimiFormatModProvider>>,
-    curseforge: Option<Vec<IshimiFormatModProvider>>
+    pub name: String,
+    pub friendly_name: Option<String>,
+    pub filename: Option<String>,
+    pub version: Option<String>,
+    pub direct: Option<Vec<IshimiFormatModDirect>>,
+    pub modrinth: Option<Vec<IshimiFormatModProvider>>,
+    pub curseforge: Option<Vec<IshimiFormatModProvider>>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatModDirect {
-    url: String
+    pub url: String
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatModProvider {
     #[serde(alias = "mod_id")]
-    project_id: String,
+    pub project_id: String,
     #[serde(alias = "version")]
-    file_id: Option<String>
+    pub file_id: Option<String>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatFiles {
-    url: String
+    pub url: String
 }

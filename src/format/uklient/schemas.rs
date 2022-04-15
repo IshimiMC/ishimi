@@ -13,36 +13,36 @@ pub(crate) enum Provider {
 #[derive(Validate, Deserialize)]
 pub(crate) struct UklientFallback {
     #[validate(custom = "validate_uklient_fallback_mc_version")]
-    minecraft_version: String,
-    version_id: String,
+    pub minecraft_version: String,
+    pub version_id: String,
 }
 
 #[derive(Deserialize)]
 pub(crate) struct UklientMod {
-    name: String,
-    id: String,
-    provider: Provider,
-    dependencies: Option<Vec<String>>,
-    fallback: Option<Vec<UklientFallback>>,
-    config: Option<Vec<String>>,
-    any_version: Option<bool>,
+    pub name: String,
+    pub id: String,
+    pub provider: Provider,
+    pub dependencies: Option<Vec<String>>,
+    pub fallback: Option<Vec<UklientFallback>>,
+    pub config: Option<Vec<String>>,
+    pub any_version: Option<bool>,
 }
 
 #[derive(Deserialize)]
 #[serde(transparent)]
 pub(crate) struct UklientModJSON {
-    arr: Vec<UklientMod>,
+    pub arr: Vec<UklientMod>,
 }
 
 #[derive(Deserialize)]
 pub(crate) struct UklientPreset {
-    name: String,
-    display_name: String,
-    mods: Vec<String>,
+    pub name: String,
+    pub display_name: String,
+    pub mods: Vec<String>,
 }
 
 #[derive(Deserialize)]
 #[serde(transparent)]
 pub(crate) struct UklientPresetJSON {
-    arr: Vec<UklientPreset>,
+    pub arr: Vec<UklientPreset>,
 }
