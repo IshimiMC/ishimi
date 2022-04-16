@@ -18,7 +18,7 @@ filename = "borderless-mining-1.1.1+1.18.jar"
 version = "" # for searching
 
 [[mods.direct]]
-url = "" # just fetches the url
+url = "https://github.com/CaffeineMC/sodium-fabric/releases/download/mc1.18.2-0.4.1/sodium-fabric-mc1.18.2-0.4.1+build.15.jar" # just fetches the url
 
 [[mods.modrinth]]
 project_id = "kYq5qkSL" # or: mod_id = "kYq5qkSL"

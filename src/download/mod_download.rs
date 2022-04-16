@@ -1,3 +1,3 @@
 mod curseforge;
-mod direct;
+pub mod direct;
 mod modrinth;
