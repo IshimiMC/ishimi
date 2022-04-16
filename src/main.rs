@@ -29,7 +29,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let url = &file.mods.as_ref().unwrap()[0].direct.as_ref().unwrap()[0].url;
 
     let slash_separated_url = url.split('/').collect::<Vec<&str>>();
-    let path = Box::new(Path::new(slash_separated_url.last().unwrap()));
+    let path = Path::new(slash_separated_url.last().unwrap());
 
     println!("Start downloading the file: {}", path.to_str().unwrap());
     dl_mod(url, path).await?;
