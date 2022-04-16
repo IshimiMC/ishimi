@@ -1,4 +1,4 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormat {
@@ -6,7 +6,7 @@ pub struct IshimiFormat {
     pub meta: IshimiFormatMeta,
     pub versions: IshimiFormatVersions,
     pub mods: Option<Vec<IshimiFormatMod>>,
-    pub files: Option<Vec<IshimiFormatFiles>>
+    pub files: Option<Vec<IshimiFormatFiles>>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -16,7 +16,7 @@ pub enum IshimiFormatSide {
     #[serde(alias = "server")]
     Server,
     #[serde(alias = "both")]
-    Both
+    Both,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -24,14 +24,14 @@ pub struct IshimiFormatMeta {
     pub name: String,
     pub author: String,
     pub version: String,
-    pub side: IshimiFormatSide
+    pub side: IshimiFormatSide,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatVersions {
     pub minecraft: String,
     pub fabric: Option<String>,
-    pub forge: Option<String>
+    pub forge: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -42,12 +42,12 @@ pub struct IshimiFormatMod {
     pub version: Option<String>,
     pub direct: Option<Vec<IshimiFormatModDirect>>,
     pub modrinth: Option<Vec<IshimiFormatModProvider>>,
-    pub curseforge: Option<Vec<IshimiFormatModProvider>>
+    pub curseforge: Option<Vec<IshimiFormatModProvider>>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatModDirect {
-    pub url: String
+    pub url: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -55,10 +55,10 @@ pub struct IshimiFormatModProvider {
     #[serde(alias = "mod_id")]
     pub project_id: String,
     #[serde(alias = "version")]
-    pub file_id: Option<String>
+    pub file_id: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatFiles {
-    pub url: String
+    pub url: String,
 }
