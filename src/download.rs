@@ -6,7 +6,7 @@ use std::io::Write;
 use std::path::Path;
 
 async fn dl_file(url: &str, path: &Path) -> Result<(), Box<dyn std::error::Error>> {
-    let response = reqwest::get(url).await?;
+    let response = reqwest::get(url).await?.error_for_status()?;
 
     let mut file = File::create(&*path)?;
 
