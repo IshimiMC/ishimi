@@ -1,8 +1,8 @@
-mod download;
-mod format;
+mod providers;
+mod formats;
 
-use crate::download::mod_download::direct::dl_mod;
-use crate::format::ishimi::schemas::IshimiFormat;
+use crate::providers::mods::direct::dl_mod;
+use crate::formats::ishimi::schemas::IshimiFormat;
 use clap::Parser;
 use std::fs;
 use std::path::Path;

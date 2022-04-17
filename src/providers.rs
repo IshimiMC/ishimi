@@ -1,5 +1,5 @@
-mod loader_download;
-pub mod mod_download;
+mod loaders;
+pub mod mods;
 
 use std::fs::File;
 use std::io::Write;

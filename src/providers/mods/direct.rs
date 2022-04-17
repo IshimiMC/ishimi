@@ -1,4 +1,4 @@
-use crate::download::dl_file;
+use crate::providers::dl_file;
 use std::path::Path;
 
 /// Essentially just a wrapper over the general `dl_file` method.
