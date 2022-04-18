@@ -5,6 +5,7 @@ name = "Example Pack"
 author = "Wuzado"
 version = "1.0.0"
 side = "client"
+base = "~/.minecraft" # optional
 
 [versions]
 minecraft = "1.18.2" # required
@@ -21,12 +22,20 @@ version = "" # for searching
 url = "https://github.com/CaffeineMC/sodium-fabric/releases/download/mc1.18.2-0.4.1/sodium-fabric-mc1.18.2-0.4.1+build.15.jar" # just fetches the url
 
 [[mods.modrinth]]
+name = "sodium" # or: slug = "sodium"
 project_id = "kYq5qkSL" # or: mod_id = "kYq5qkSL"
 file_id = "ug2qKTPR" # or: version = "ug2qKTPR"
 
 [[mods.curseforge]]
+name = "sodium" # or: slug = "sodium"
 project_id = "327154" # or: mod_id = "327154"
 file_id = "3509043" # or: version = "3509043"
 
+[[mods.github]]
+owner = "" # or: user = ""
+repo = "" # or: repository = ""
+tag = "" # or: release = "" - optional, defaults to the newest release/tag
+
 [[files]]
 url = ""
+destination = "" # optional (defaults to the root of the base folder); or: dest = ""

@@ -1,3 +1,4 @@
+use semver::Op;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -25,6 +26,7 @@ pub struct IshimiFormatMeta {
     pub author: String,
     pub version: String,
     pub side: IshimiFormatSide,
+    pub base: Option<String>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -43,6 +45,7 @@ pub struct IshimiFormatMod {
     pub direct: Option<Vec<IshimiFormatModDirect>>,
     pub modrinth: Option<Vec<IshimiFormatModProvider>>,
     pub curseforge: Option<Vec<IshimiFormatModProvider>>,
+    pub github: Option<Vec<IshimiFormatModGithub>>
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -52,13 +55,27 @@ pub struct IshimiFormatModDirect {
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatModProvider {
+    #[serde(alias = "slug")]
+    pub name: Option<String>,
     #[serde(alias = "mod_id")]
-    pub project_id: String,
+    pub project_id: Option<String>,
     #[serde(alias = "version")]
     pub file_id: Option<String>,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct IshimiFormatModGithub {
+    #[serde(alias = "user")]
+    pub owner: String,
+    #[serde(alias = "repository")]
+    pub repo: String,
+    #[serde(alias = "release")]
+    pub tag: Option<String>
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub struct IshimiFormatFiles {
     pub url: String,
+    #[serde(alias = "dest")]
+    pub destination: Option<String>
 }
